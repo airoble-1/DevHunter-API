@@ -105,6 +105,10 @@
     },
     "resume": {
       "type": "string"
+    },
+    "posts": {
+      "via": "author",
+      "collection": "post"
     }
   }
 }
