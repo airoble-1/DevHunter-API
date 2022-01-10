@@ -1,3 +1,3 @@
 module.exports = ({ env }) => ({
-  url: env("https://devhunter.herokuapp.com"),
+  url: env("HEROKU_URL"),
 });
