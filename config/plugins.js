@@ -9,17 +9,18 @@ module.exports = ({ env }) => ({
     },
   },
   email: {
-    provider: "nodemailer",
+    provider: env("EMAIL_PROVIDER"),
     providerOptions: {
-      service: "Gmail",
+      host: env("EMAIL_SMTP_HOST", "smtp.example.com"),
+      port: env("EMAIL_SMTP_PORT", 587),
       auth: {
-        user: env("SMTP_USERNAME"),
-        pass: env("SMTP_PASSWORD"),
+        user: env("EMAIL_SMTP_USER"),
+        pass: env("EMAIL_SMTP_PASS"),
       },
     },
     settings: {
-      defaultFrom: env("SMTP_USERNAME"),
-      defaultReplyTo: env("SMTP_USERNAME"),
+      defaultFrom: env("EMAIL_ADDRESS_FROM"),
+      defaultReplyTo: env("EMAIL_ADDRESS_REPLY"),
     },
   },
   // ...
