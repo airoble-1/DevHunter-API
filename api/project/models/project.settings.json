@@ -49,6 +49,10 @@
       "via": "projects",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "issues": {
+      "via": "project",
+      "collection": "issue"
     }
   }
 }
